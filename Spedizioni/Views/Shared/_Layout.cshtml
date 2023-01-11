@@ -9,32 +9,41 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Nome dell'applicazione", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <nav class="navbar navbar-expand-lg" style="background-color: #f8c33e; ">
+        <div class="container d-flex">
+            <div>
+                <img src="~/Content/img/logo.png" width="70" />
+                @Html.ActionLink("ItalyInBox", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Informazioni", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contatto", "Contact", "Home")</li>
-                </ul>
+            <div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse align-self-baseline" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page">@Html.ActionLink("Privati", "Privati", "Gestione")</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">@Html.ActionLink("Aziende", "Aziende", "Gestione")</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">@Html.ActionLink("Spedizioni", "Spedizioni", "Gestione")</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">@Html.ActionLink("Login", "Login", "Home")</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
+</nav>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Applicazione ASP.NET</p>
-        </footer>
     </div>
+        <footer class="container-fluid" style="background-color: #f8c33e;" >
+            <p>&copy; @DateTime.Now.Year - Applicazione ASP.NET by Daniela</p>
+        </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
