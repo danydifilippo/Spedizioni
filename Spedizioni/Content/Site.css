@@ -34,9 +34,44 @@ a{
 .table {
     max-width: 1000px;
     background: #93c0efc9;
+    border-radius: 10px
 }
 
 .form-horizontal {
+    margin: auto;
     max-width: 700px;
     background: #93c0efc9;
+    border-radius: 10px;
+    box-shadow: inherit;
+}
+
+.edit {
+    margin-left: 15%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.nav-item {
+    background-color: #93c0efc9;
+    border-radius: 50%;
+    padding: 1em
+}
+
+.navbar-nav {
+    --bs-nav-link-padding-y: 0;
+}
+
+.btn-outline-primary {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    --bs-btn-color: #93c0efc9;
+    --bs-btn-border-color: #93c0efc9;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #93c0efc9;
+}
+
+
+
+.input-group-text {
+    width: 15%;
 }

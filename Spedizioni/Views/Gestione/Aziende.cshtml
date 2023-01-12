@@ -53,9 +53,8 @@
             @Html.DisplayFor(modelItem => item.email)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Modifica", "Edit", "Azioni", new { id=item.IdCliente }) |
+            @Html.ActionLink("Cancella", "Delete", "Azioni", new { id = item.IdCliente })
         </td>
     </tr>
 }

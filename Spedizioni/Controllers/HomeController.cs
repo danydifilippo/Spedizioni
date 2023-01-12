@@ -26,6 +26,13 @@ namespace Spedizioni.Controllers
             return View();
         }
 
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return Redirect(FormsAuthentication.LoginUrl);
+        }
+
+
 
         public ActionResult Index()
         {

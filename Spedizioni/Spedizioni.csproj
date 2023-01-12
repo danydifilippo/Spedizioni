@@ -209,9 +209,13 @@
     <Content Include="Views\Gestione\Aziende.cshtml" />
     <Content Include="Views\Gestione\Spedizioni.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Gestione\EditPrivate.cshtml" />
+    <Content Include="Views\Gestione\CreatePrivate.cshtml" />
+    <Content Include="Views\Gestione\CreateDelivery.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Azioni\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

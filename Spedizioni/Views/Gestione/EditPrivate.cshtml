@@ -1,0 +1,84 @@
+﻿@model Spedizioni.Models.Clienti
+
+@{
+    ViewBag.Title = "EditPrivate";
+}
+
+<div class="edit">
+    <h2>Modifica Cliente</h2>
+</div>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal p-3">
+        <h4>Clienti</h4>
+        <hr />
+
+        @Html.HiddenFor(model => model.IdCliente, new { htmlAttributes = new { @class = "form-control" } })
+
+        <div class="row">
+            <div class="form-group col-6">
+                @Html.LabelFor(model => model.Cognome, htmlAttributes: new { @class = "control-label " })
+                <div>
+                    @Html.EditorFor(model => model.Cognome, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Cognome, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group col-6">
+                @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="form-group col-6">
+                @Html.LabelFor(model => model.CF, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.EditorFor(model => model.CF, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.CF, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="form-group col-6">
+                @Html.LabelFor(model => model.Indirizzo, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.EditorFor(model => model.Indirizzo, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Indirizzo, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group col-6">
+                @Html.LabelFor(model => model.Telefono, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.EditorFor(model => model.Telefono, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Telefono, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.email, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-6">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Salva" class="btn btn-outline-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

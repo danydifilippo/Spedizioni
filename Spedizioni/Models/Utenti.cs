@@ -21,7 +21,7 @@ namespace Spedizioni.Models
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM [USER] WHERE Username = @username and [Password]=@Password", con);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM UTENTE WHERE Username = @username and [Password]=@Password", con);
                 cmd.Parameters.AddWithValue("username", username);
                 cmd.Parameters.AddWithValue("password", password);
 
